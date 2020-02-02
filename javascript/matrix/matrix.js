@@ -24,6 +24,6 @@ export class Matrix {
 
 }
 
-new Matrix('1 2 3 4\n5 6 7 8\n9 8 7 6').columns[3]
+//new Matrix('1 2 3 4\n5 6 7 8\n9 8 7 6').columns[3]
 
 

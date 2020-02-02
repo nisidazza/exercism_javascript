@@ -1,14 +1,10 @@
-//
-// This is only a SKELETON file for the 'Resistor Color' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
 export const COLORS = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"];
 
+
+// -- SOLUTION 1 --
 export const colorCode = (color) => {
   let i = 0
   while (i < COLORS.length) {
-    // for (let i = 0; i < COLORS.length; i++) {
     if (color == COLORS[i]) {
       return i
     }
@@ -16,6 +12,13 @@ export const colorCode = (color) => {
   }
   return -1
 };
+
+
+// -- SOLUTION 2 --
+// export const colorCode = (color) => {
+//   let number = COLORS.indexOf(color)
+//   return number
+// };
 
 
 

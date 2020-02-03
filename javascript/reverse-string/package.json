@@ -11,6 +11,7 @@
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
+    "@babel/node": "^7.8.4",
     "@babel/plugin-syntax-bigint": "^7.7.4",
     "@babel/preset-env": "^7.5.5",
     "@types/jest": "^24.0.16",
@@ -27,6 +28,7 @@
     ]
   },
   "scripts": {
+    "debug": "babel-node --inspect-brk reverse-string.js",
     "test": "jest --no-cache ./*",
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint .",

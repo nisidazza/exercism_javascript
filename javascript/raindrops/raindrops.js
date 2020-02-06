@@ -1,21 +1,18 @@
-
 export const convert = number => {
-  let result = "";
-  let pling = "";
-  let plang = "";
-  let plong = "";
+  let result = [];
   if (number % 3 === 0) {
-    pling += "Pling";
+    result.push("Pling");
   }
   if (number % 5 === 0) {
-    plang += "Plang";
+    result.push("Plang");
   }
   if (number % 7 === 0) {
-    plong += "Plong";
-  } else {
-    result += number.toString();
+    result.push("Plong");
   }
-  return pling + plang + plong || result;
+  if (result.length === 0) {
+    result.push(number.toString());
+  }
+  return result.join("");
 };
 
 // let n = 30;

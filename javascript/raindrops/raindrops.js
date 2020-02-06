@@ -1,8 +1,22 @@
-//
-// This is only a SKELETON file for the 'Raindrops' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
 
-export const convert = () => {
-  throw new Error("Remove this statement and implement this function");
+export const convert = number => {
+  let result = "";
+  let pling = "";
+  let plang = "";
+  let plong = "";
+  if (number % 3 === 0) {
+    pling += "Pling";
+  }
+  if (number % 5 === 0) {
+    plang += "Plang";
+  }
+  if (number % 7 === 0) {
+    plong += "Plong";
+  } else {
+    result += number.toString();
+  }
+  return pling + plang + plong || result;
 };
+
+// let n = 30;
+// convert(n);

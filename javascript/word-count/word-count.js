@@ -5,10 +5,10 @@ export const countWords = phrase => {
     .replace(/[./#!$%^&*;:{}=\-_`~()@?¡¿,\u0091]/g, " ")
     .replace(/\s+/g, "||");
   let wordsArr = cleanedPhrase.split("||");
-  console.log(wordsArr);
+  //console.log(wordsArr);
   let objWordsCount = {};
   for (let i = 0; i < wordsArr.length; i++) {
-    let word = wordsArr[i];
+    let word = wordsArr[i].replace(/(^')|('$)/g, "");
     //console.log(word);
     if (word !== "") {
       if (!objWordsCount[word]) {
@@ -21,5 +21,5 @@ export const countWords = phrase => {
   return objWordsCount;
 };
 
-let s = 'Joe can\'t tell between \'large\' and large.';
+let s = "Joe can't tell between 'large' and large.";
 console.log(countWords(s));

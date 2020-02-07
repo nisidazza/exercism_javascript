@@ -29,6 +29,7 @@
   },
   "scripts": {
     "debug": "babel-node --inspect-brk word-count.js",
+    "start": "babel-node word-count.js",
     "test": "jest --no-cache ./*",
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint .",

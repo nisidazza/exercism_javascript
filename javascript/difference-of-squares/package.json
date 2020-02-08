@@ -28,6 +28,7 @@
   },
   "scripts": {
     "debug": "babel-node --inspect-brk difference-of-squares.js",
+    "start": "babel-node difference-of-squares.js",
     "test": "jest --no-cache ./*",
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint .",

@@ -20,6 +20,4 @@ export const countWords = phrase => {
   }
   return objWordsCount;
 };
-
-let s = "Joe can't tell between 'large' and large.";
 console.log(countWords(s));

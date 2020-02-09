@@ -27,6 +27,8 @@
     ]
   },
   "scripts": {
+    "debug": "babel-node --inspect-brk perfect-number.js",
+    "start": "babel-node perfect-number.js",
     "test": "jest --no-cache ./*",
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint .",

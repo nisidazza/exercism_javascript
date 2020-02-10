@@ -27,6 +27,8 @@
     ]
   },
   "scripts": {
+    "debug": "babel-node --inspect-brk acronym.js",
+    "start": "babel-node acronym.js",
     "test": "jest --no-cache ./*",
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint .",

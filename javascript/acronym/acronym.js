@@ -3,6 +3,10 @@
 // convenience to get you started writing code faster.
 //
 
-export const parse = () => {
-  throw new Error("Remove this statement and implement this function");
+export const parse = (phrase) => {
+  phrase = phrase.replace(/[^A-Za-z]/g, " ")
+  console.log(phrase)
 };
+
+let a = 'Complementary metal-oxide semiconductor'
+parse(a)

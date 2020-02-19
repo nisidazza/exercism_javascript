@@ -3,10 +3,15 @@
 // convenience to get you started writing code faster.
 //
 
-export const parse = (phrase) => {
-  phrase = phrase.replace(/[^A-Za-z]/g, " ")
-  console.log(phrase)
+export const parse = phrase => {
+  let acronym = phrase
+    .replace(/[^A-Za-z,']/g, " ")
+    .toUpperCase()
+    .split(" ")
+    .map(word => word[0])
+    .join("");
+  return acronym;
 };
 
-let a = 'Complementary metal-oxide semiconductor'
-parse(a)
+let a = "Halley's Comet";
+parse(a);

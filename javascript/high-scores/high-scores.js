@@ -4,23 +4,41 @@
 //
 
 export class HighScores {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
+  constructor(input) {
+    this.myScores = input;
   }
 
   get scores() {
-    throw new Error("Remove this statement and implement this function");
+    return this.myScores;
   }
 
   get latest() {
-    throw new Error("Remove this statement and implement this function");
+    return this.myScores[this.myScores.length - 1];
   }
 
   get personalBest() {
-    throw new Error("Remove this statement and implement this function");
+    let sortedArr = this.myScores.sort(function(a, b) {
+      return b - a;
+    });
+    return sortedArr[0];
   }
 
   get personalTopThree() {
-    throw new Error("Remove this statement and implement this function");
+    let sortedArr = this.myScores.sort(function(a, b) {
+      return b - a;
+    });
+    let topThreeArr = [];
+    for (let i = 0; i < sortedArr.length; i++) {
+      if(i < 3) {
+        topThreeArr.push(sortedArr[i])
+      } else {
+        break;
+      }
+
+    }
+    return topThreeArr
   }
 }
+
+let my_scores = [10, 30, 90, 30, 100, 20, 10, 0, 30, 40, 40, 70, 70];
+new HighScores(my_scores).personalTopThree;
